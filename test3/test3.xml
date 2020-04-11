@@ -1,0 +1,29 @@
+<krpano version="1.18" bgcolor="0x000000">
+
+	<!-- the skin and the flat pano viewing and controlling setup -->
+	<include url="skin/defaultskin.xml" />
+	<include url="skin/flatpano_setup.xml" />
+	
+	<!-- preview pano image -->
+	<preview url="test3.tiles/preview.jpg" />
+
+	<!-- pano image -->
+	<image type="CYLINDER" hfov="1.00" vfov="0.500000" voffset="0.00" multires="true" tilesize="512" progressive="true">
+		<level tiledimagewidth="10000" tiledimageheight="5000" download="view">
+			<cylinder url="test3.tiles/l5/%v/l5_%v_%h.jpg" />
+		</level>
+		<level tiledimagewidth="5000" tiledimageheight="2500" download="view">
+			<cylinder url="test3.tiles/l4/%v/l4_%v_%h.jpg" />
+		</level>
+		<level tiledimagewidth="2560" tiledimageheight="1280" download="view">
+			<cylinder url="test3.tiles/l3/%v/l3_%v_%h.jpg" />
+		</level>
+		<level tiledimagewidth="1280" tiledimageheight="640" download="view">
+			<cylinder url="test3.tiles/l2/%v/l2_%v_%h.jpg" />
+		</level>
+		<level tiledimagewidth="640" tiledimageheight="320" download="view">
+			<cylinder url="test3.tiles/l1/%v/l1_%v_%h.jpg" />
+		</level>
+	</image>
+
+</krpano>
